@@ -15,7 +15,7 @@
 {% comment %}
   Template specific overides
 {% endcomment %}
-{%- if template.name == 'product' -%}
+{%- if request.page_type == 'product' -%}
   {%- assign og_title = product.title | strip_html -%}
   {%- assign og_type = 'product' -%}
   {%- capture og_image_tags -%}
@@ -28,7 +28,7 @@
     {%- endfor -%}
   {%- endcapture -%}
 
-{%- elsif template.name == 'article' -%}
+{%- elsif request.page_type == 'article' -%}
   {%- assign og_title = article.title | strip_html -%}
   {%- assign og_type = 'article' -%}
   {%- assign og_description = article.excerpt_or_content | strip_html -%}
@@ -42,7 +42,7 @@
     {%- endcapture -%}
   {%- endif -%}
 
-{%- elsif template.name == 'collection' -%}
+{%- elsif request.page_type == 'collection' -%}
   {%- assign og_title = collection.title | strip_html -%}
   {%- assign og_type = 'product.group' -%}
   {%- if collection.image -%}
@@ -55,7 +55,7 @@
     {%- endcapture -%}
   {%- endif -%}
 
-{%- elsif template.name == 'password' -%}
+{%- elsif request.page_type == 'password' -%}
   {%- assign og_title = shop.name -%}
   {%- assign og_url = shop.url -%}
   {%- assign og_description = shop.description | default: shop.name -%}
@@ -66,7 +66,7 @@
 <meta property="og:title" content="{{ og_title }}">
 <meta property="og:type" content="{{ og_type }}">
 <meta property="og:description" content="{{ og_description }}">
-{%- if template.name == 'product' -%}
+{%- if request.page_type == 'product' -%}
   {%- if product.available -%}
     {%- assign og_product_availability = 'instock' -%}
   {%- else -%}

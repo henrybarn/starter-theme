@@ -29,7 +29,7 @@
       <div>
         {% if product.featured_image != blank %}
           <a href="{{ product.url | within: collection }}">
-            {% include 'responsive-image' with
+            {% render 'responsive-image' with
               image: product.featured_image,
               max_width: 700,
               max_height: 800
@@ -97,6 +97,6 @@
   </div>
 
   {% if paginate.pages > 1 %}
-    {% include 'pagination' %}
+    {% render 'pagination' with paginate as paginate %}
   {% endif %}
 {% endpaginate %}

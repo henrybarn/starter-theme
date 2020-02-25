@@ -10,7 +10,7 @@
       {% if settings[social_link] != blank %}
         <li>
           <a href="{{ settings[social_link] }}" title="{{ 'layout.footer.social_platform' | t: name: shop.name, platform: social }}">
-            {% include social_icon %}
+            {% render social_icon %}
             <span class="icon-fallback-text">{{ social }}</span>
           </a>
         </li>
