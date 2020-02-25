@@ -1,6 +1,6 @@
 {
   "name": "starter-theme",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.1-alpha.1",
   "private": true,
   "author": "Shopify Inc.",
   "description": "An opinionated, Slate compatible, starting point for developing Shopify themes.",
