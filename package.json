@@ -8,16 +8,16 @@
     "shopify",
     "theme"
   ],
-  "bugs": "https://github.com/Shopify/starter-theme/issues",
+  "bugs": "https://github.com/henrybarn/starter-theme/issues",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Shopify/starter-theme.git"
+    "url": "https://github.com/henrybarn/starter-theme.git"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/plugin-transform-runtime": "^7.8.3",
-    "@shopify/slate-tools": "1.0.0-beta.19",
+    "@shopify/slate-tools": "https://github.com/henrybarn/slate.git",
     "babel-preset-shopify": "21.0.0",
     "eslint-plugin-shopify": "^35.0.0",
     "stylelint-config-prettier": "^8.0.1",
