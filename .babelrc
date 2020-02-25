@@ -1,4 +1,14 @@
 {
-  "presets": ["shopify/web"],
-  "plugins": ["transform-async-to-generator"]
+  "presets": [
+    [
+      "babel-preset-shopify/web",
+      {
+        "corejs": 3
+      }
+    ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-transform-runtime"
+  ]
 }
